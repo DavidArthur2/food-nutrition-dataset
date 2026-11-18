@@ -1,0 +1,36 @@
+{
+  "title": "CalorTracker Food Nutrition Dataset (USDA-derived)",
+  "id": "YOUR_KAGGLE_USERNAME/calortracker-food-nutrition",
+  "subtitle": "Calories, macros and vitamins per 100 g plus household portions, from USDA.",
+  "description": "461 common foods with nutrients per 100 g and household portions, taken from USDA FoodData Central and keyed by FDC id and CalorTracker page slug.\n\nVersion 2026-11-18. CC0 1.0. Source: USDA FoodData Central (https://fdc.nal.usda.gov/). Derived and cleaned by CalorTracker (https://calortracker.com/nutrition). API: https://calortracker.com/developers.",
+  "isPrivate": false,
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "keywords": [
+    "nutrition",
+    "food",
+    "calories",
+    "macronutrients",
+    "USDA",
+    "FoodData Central",
+    "vitamins",
+    "minerals"
+  ],
+  "resources": [
+    {
+      "path": "foods.csv",
+      "description": "One row per food: identity, USDA source and 31 nutrients per 100 g."
+    },
+    {
+      "path": "portions.csv",
+      "description": "USDA household portions per food, with their weight in grams."
+    },
+    {
+      "path": "foods.json",
+      "description": "The same foods as nested JSON: nutrients in per100g, portions as an array."
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "name": "calortracker-food-nutrition",
+  "title": "CalorTracker Food Nutrition Dataset (USDA-derived)",
+  "version": "2026-11-18",
+  "description": "461 common foods with nutrients per 100 g and household portions, taken from USDA FoodData Central and keyed by FDC id and CalorTracker page slug.",
+  "homepage": "https://calortracker.com/nutrition",
+  "licenses": [
+    {
+      "name": "CC0-1.0",
+      "title": "CC0 1.0 Universal (Public Domain Dedication)",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "USDA FoodData Central",
+      "path": "https://fdc.nal.usda.gov/",
+      "license": "CC0-1.0"
+    },
+    {
+      "title": "CalorTracker food database",
+      "path": "https://calortracker.com/nutrition"
+    }
+  ],
+  "keywords": [
+    "nutrition",
+    "food",
+    "calories",
+    "macronutrients",
+    "USDA",
+    "FoodData Central"
+  ],
+  "resources": [
+    {
+      "name": "foods",
+      "path": "foods.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "description": "One row per food: identity, USDA source and 31 nutrients per 100 g.",
+      "bytes": 182686,
+      "hash": "sha256:d68d3a4ce555989364ddeee2e4a6a6ff0b13471bdb3c0a94577f6967f1ac0367",
+      "schema": {
+        "fields": [
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "CalorTracker page slug: https://calortracker.com/nutrition/<slug>"
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "description": "Food name as shown on the page."
+          },
+          {
+            "name": "category",
+            "type": "string",
+            "description": "One of 20 categories."
+          },
+          {
+            "name": "fdc_id",
+            "type": "integer",
+            "description": "USDA FoodData Central id."
+          },
+          {
+            "name": "usda_description",
+            "type": "string",
+            "description": "USDA's own description of the row."
+          },
+          {
+            "name": "usda_data_type",
+            "type": "string",
+            "description": "FDC dataset: sr_legacy_food, foundation_food or survey_fndds_food."
+          },
+          {
+            "name": "usda_release",
+            "type": "string",
+            "description": "FDC release the values were read from."
+          },
+          {
+            "name": "retrieved_on",
+            "type": "date",
+            "description": "Day the values were read from FDC."
+          },
+          {
+            "name": "energy_source",
+            "type": "string",
+            "description": "Which FDC energy figure kcal came from: energy, atwater_general or atwater_specific."
+          },
+          {
+            "name": "energy_kcal",
+            "type": "number",
+            "description": "Per 100 g, in kcal. Empty when USDA did not report it."
+          },
+          {
+            "name": "protein_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "fat_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "saturated_fat_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "monounsaturated_fat_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "polyunsaturated_fat_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "cholesterol_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "carbs_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "fiber_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "sugars_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "sodium_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "potassium_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "calcium_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "iron_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "magnesium_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "phosphorus_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "zinc_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_a_rae_ug",
+            "type": "number",
+            "description": "Per 100 g, in µg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_c_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_d_ug",
+            "type": "number",
+            "description": "Per 100 g, in µg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_e_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_k_ug",
+            "type": "number",
+            "description": "Per 100 g, in µg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_b6_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "vitamin_b12_ug",
+            "type": "number",
+            "description": "Per 100 g, in µg. Empty when USDA did not report it."
+          },
+          {
+            "name": "folate_dfe_ug",
+            "type": "number",
+            "description": "Per 100 g, in µg. Empty when USDA did not report it."
+          },
+          {
+            "name": "thiamin_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "riboflavin_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "niacin_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "caffeine_mg",
+            "type": "number",
+            "description": "Per 100 g, in mg. Empty when USDA did not report it."
+          },
+          {
+            "name": "alcohol_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "water_g",
+            "type": "number",
+            "description": "Per 100 g, in g. Empty when USDA did not report it."
+          },
+          {
+            "name": "page_url",
+            "type": "string",
+            "description": "The food's CalorTracker page."
+          },
+          {
+            "name": "fdc_url",
+            "type": "string",
+            "description": "The food's FoodData Central page."
+          }
+        ],
+        "primaryKey": "slug"
+      }
+    },
+    {
+      "name": "portions",
+      "path": "portions.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "description": "USDA household portions per food, with their weight in grams.",
+      "bytes": 53386,
+      "hash": "sha256:42f0aa4d804091fc1f1fc8a028d87e4ee8573731fca111dd4ca7dcec968babd8",
+      "schema": {
+        "fields": [
+          {
+            "name": "slug",
+            "type": "string",
+            "description": "Joins foods.csv."
+          },
+          {
+            "name": "fdc_id",
+            "type": "integer",
+            "description": "USDA FoodData Central id."
+          },
+          {
+            "name": "position",
+            "type": "integer",
+            "description": "Order USDA lists the portion in, from 1."
+          },
+          {
+            "name": "label",
+            "type": "string",
+            "description": "USDA's portion description, e.g. 1 medium (3 in dia)."
+          },
+          {
+            "name": "grams",
+            "type": "number",
+            "description": "Weight of the portion in grams."
+          }
+        ],
+        "primaryKey": [
+          "slug",
+          "position"
+        ],
+        "foreignKeys": [
+          {
+            "fields": "slug",
+            "reference": {
+              "resource": "foods",
+              "fields": "slug"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "foods-json",
+      "path": "foods.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "description": "The same foods as nested JSON: nutrients in per100g, portions as an array.",
+      "bytes": 702906,
+      "hash": "sha256:c0c534a2029470037aa6a41812fd5f01e90115d062fa7818b91f315be9f36f9d"
+    }
+  ]
+}
